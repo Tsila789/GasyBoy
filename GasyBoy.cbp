@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Z80" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Z80" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add library="SDL_image" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Z80" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="C:/Program Files (x86)/CodeBlocks/SDL-1.2.15/include" />
+		</Compiler>
+		<Linker>
+			<Add library="mingw32" />
+			<Add library="SDLmain" />
+			<Add library="SDL.dll" />
+			<Add library="user32" />
+			<Add library="gdi32" />
+			<Add library="winmm" />
+			<Add library="dxguid" />
+			<Add directory="C:/Program Files (x86)/CodeBlocks/SDL-1.2.15/lib" />
+		</Linker>
+		<Unit filename="cpu.cpp" />
+		<Unit filename="cpu.h" />
+		<Unit filename="defs.h" />
+		<Unit filename="gameboy.cpp" />
+		<Unit filename="gameboy.h" />
+		<Unit filename="gpu.cpp" />
+		<Unit filename="gpu.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="mmu.cpp" />
+		<Unit filename="mmu.h" />
+		<Unit filename="register.cpp" />
+		<Unit filename="register.h" />
+		<Unit filename="timer.cpp" />
+		<Unit filename="timer.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
