@@ -12,8 +12,8 @@ class Interrupter
     private:
         bool MasterInterrupt;
         MMU *mmu;
-        Cpu cpu;
-        Gpu gpu;
+        Cpu *cpu;
+        Gpu *gpu;
     public:
         Interrupter(MMU &Mmu, Cpu &m_cpu, Gpu &m_gpu);
         ~Interrupter();

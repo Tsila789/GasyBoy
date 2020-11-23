@@ -13,7 +13,7 @@ MMU::MMU()
 		WorkingRAM[i] = 0x0;
 	in_bios = true;
 	modified_vram = false;
-	char filename[50] = "./TETRIS.gb";
+	char filename[50] = "./bin/TETRIS.gb";
 	loadRom(filename);
 	WorkingRAM[0xFF00 - 0xC000] = 0xEF;
 	WorkingRAM[0xFF85 - 0xC000] = 0x01;

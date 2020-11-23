@@ -44,13 +44,13 @@ void Interrupter::serviceInterrupt(int interrupt)
     uint8_t req = mmu->read_ram(0xFF0F);
     req &= ~(1 << interrupt);
     mmu->write_ram(0xFF0F, req);
-    cpu.push_SP(cpu.get_PC());
+    cpu->push_SP(cpu->get_PC());
     switch (interrupt)
     {
-        case 0: cpu.set_PC(0x40); break;
-        case 1: cpu.set_PC(0x48); break;
-        case 2: cpu.set_PC(0x50); break;
-        case 4: cpu.set_PC(0x60); break;
+        case 0: cpu->set_PC(0x40); break;
+        case 1: cpu->set_PC(0x48); break;
+        case 2: cpu->set_PC(0x50); break;
+        case 4: cpu->set_PC(0x60); break;
     }
 }
 
